@@ -58,7 +58,7 @@ class Mobile_Code_Challenge_Tests: XCTestCase {
                 "total_pages": 500,
                 "total_results": 10000
             }
-            """
+        """
         
         let jsonData = json.data(using: .utf8)!
         let movieData = try! JSONDecoder().decode(MovieList.self, from: jsonData)

@@ -10,6 +10,7 @@
 		326631E626C70FD3003B3706 /* Mobile_Code_Challenge_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326631E526C70FD3003B3706 /* Mobile_Code_Challenge_UITests.swift */; };
 		326631F426C70FE2003B3706 /* Mobile_Code_Challenge_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326631F326C70FE2003B3706 /* Mobile_Code_Challenge_Tests.swift */; };
 		326631FC26C71ABE003B3706 /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = 326631FB26C71ABE003B3706 /* testData.json */; };
+		326AD3A426C7926B00251F83 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326AD3A326C7926B00251F83 /* ConnectionManager.swift */; };
 		32BB406026C5899000E7404A /* Mobile_Code_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BB405F26C5899000E7404A /* Mobile_Code_ChallengeApp.swift */; };
 		32BB406226C5899000E7404A /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BB406126C5899000E7404A /* MovieListView.swift */; };
 		32BB406426C5899100E7404A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BB406326C5899100E7404A /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		326631F326C70FE2003B3706 /* Mobile_Code_Challenge_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Code_Challenge_Tests.swift; sourceTree = "<group>"; };
 		326631F526C70FE2003B3706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		326631FB26C71ABE003B3706 /* testData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testData.json; sourceTree = "<group>"; };
+		326AD3A326C7926B00251F83 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		32BB405C26C5899000E7404A /* Mobile_Code_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobile_Code_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BB405F26C5899000E7404A /* Mobile_Code_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Code_ChallengeApp.swift; sourceTree = "<group>"; };
 		32BB406126C5899000E7404A /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				32BB407D26C5AC9600E7404A /* constants.swift */,
+				326AD3A326C7926B00251F83 /* ConnectionManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				32BB407626C59FA700E7404A /* MovieDetailView.swift in Sources */,
 				32BB406226C5899000E7404A /* MovieListView.swift in Sources */,
+				326AD3A426C7926B00251F83 /* ConnectionManager.swift in Sources */,
 				32F7A7A426C6D6FB006D9C78 /* MovieReview.swift in Sources */,
 				32BB406026C5899000E7404A /* Mobile_Code_ChallengeApp.swift in Sources */,
 				32BB408226C5B48F00E7404A /* Review.swift in Sources */,

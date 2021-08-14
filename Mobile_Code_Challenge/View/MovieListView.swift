@@ -14,6 +14,9 @@ struct MovieListView: View {
             VStack {
                 if viewModel.loading {
                     Text("Loading ...")
+                }
+                if viewModel.noNetwork {
+                    Text("No Network: Please Connect to wifi to continue")
                 } else {
                     List(viewModel.movies.results) { movie in
                         NavigationLink(destination: MovieDetails(movie: movie, viewModel: viewModel)){

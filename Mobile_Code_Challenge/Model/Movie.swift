@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie: Decodable, Identifiable {
+struct Movie: Codable, Identifiable {
     let popularity: Float
     let vote_count: Int
     let id: Int
