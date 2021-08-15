@@ -14,10 +14,17 @@ struct MovieDetails : View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Image(uiImage: "\(Constants.IMAGE_URL)\(movie.poster_path)".load())
-                .resizable()
-                .frame(width: UIScreen.main.bounds.height/4, height: UIScreen.main.bounds.height/3)
-                .padding()
+            if InternetConnectionManager.isConnectedToNetwork(){
+                Image(uiImage: "\(Constants.IMAGE_URL)\(movie.poster_path)".load())
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.height/4, height: UIScreen.main.bounds.height/3)
+                    .padding()
+            } else{
+                Image(systemName: "photo")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .padding()
+            }
             VStack(alignment: .leading, spacing: 15) {
                 HStack {
                     Text("Release Date").foregroundColor(.gray)
@@ -31,16 +38,19 @@ struct MovieDetails : View {
             Text("Reviews")
                 .font(.system(size: 32))
                 .bold()
-            
-            List(viewModel.movieReviews) { review in
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack(spacing: 5) {
-                        Image(systemName: "person.circle.fill")
-                        Text(review.author)
-                            .bold()
+            if InternetConnectionManager.isConnectedToNetwork(){
+                List(viewModel.movieReviews) { review in
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack(spacing: 5) {
+                            Image(systemName: "person.circle.fill")
+                            Text(review.author)
+                                .bold()
+                        }
+                        Text(review.content)
                     }
-                    Text(review.content)
                 }
+            } else{
+                Text("Connect to internet to view reviews")
             }
         }
         .onAppear {
@@ -62,4 +72,5 @@ extension String {
         }
         return UIImage()
     }
+    
 }

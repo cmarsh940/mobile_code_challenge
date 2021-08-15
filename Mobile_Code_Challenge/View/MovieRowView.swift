@@ -12,11 +12,19 @@ struct MovieRow : View {
     
     var body: some View {
         HStack {
-            Image(uiImage: "\(Constants.IMAGE_URL)\(movie.poster_path)".load())
-                .resizable()
-                .scaledToFit()
-                .frame(width: 90, height: 120)
-                .cornerRadius(4)
+            if InternetConnectionManager.isConnectedToNetwork(){
+                Image(uiImage: "\(Constants.IMAGE_URL)\(movie.poster_path)".load())
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 90, height: 120)
+                    .cornerRadius(4)
+            } else{
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 90, height: 120)
+                    .cornerRadius(4)
+            }
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(movie.title)
